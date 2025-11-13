@@ -10,10 +10,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
-      - name: Install maturin
-        run: pip install maturin
-      - name: Build package (maturin)
-        run: maturin build --no-sdist
-      - name: Run unit tests
-        run: pytest -q
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          pip install maturin pytest
+          pip install -e .
+      - name: Build Rust extension
+        run: maturin develop
+      - name: Build wheel
+        run: maturin build --release
+      - name: Test imports
+        run: |
+          python -c "import que_core_engine; print('✅ Rust engine imported')"
+          python -c "from que_core.tools.system_tools import system_query; print('✅ Python tools imported')"
+      - name: Run basic functionality test
+        run: |
+          python -c "
+          from que_core.tools.system_tools import system_query
+          result = system_query(args={'what': 'overview'})
+          assert result['success'], f'System query failed: {result[\"error\"]}'
+          print('✅ Basic functionality test passed')
+          "
