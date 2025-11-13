@@ -14,11 +14,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install maturin pytest
-          pip install -e .
-      - name: Build Rust extension
-        run: maturin develop
       - name: Build wheel
         run: maturin build --release
+      - name: Install built package
+        run: |
+          pip install target/wheels/*.whl
       - name: Test imports
         run: |
           python -c "import que_core_engine; print('✅ Rust engine imported')"
