@@ -1,0 +1,171 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "que-core"
+version = "0.1.0"
+description = "QUE CORE - Hybrid Rust+Python runtime for AI agents to control computers. 100+ tools consolidated into 26 powerful functions for system control, automation, file management, and more."
+authors = [
+    {name="QUE CORE Team", email="sarathbabuc@duck.com"}
+]
+readme = "README.md"
+license = {text="MIT"}
+requires-python = ">=3.9"
+keywords = [
+    "ai-agents", "computer-use", "automation", "system-control", 
+    "rust", "python", "tools", "api", "desktop-automation",
+    "cross-platform", "tool-calling", "agent-framework"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Desktop Environment",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+    # Core API and server
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.0.0",
+    "websockets>=11.0.0",
+    
+    # System and process management
+    "psutil>=5.9.0",
+    
+    # UI automation and interaction
+    "pyautogui>=0.9.54",
+    "pynput>=1.7.6",
+    
+    # Image and vision processing
+    "pillow>=10.0.0",
+    "opencv-python>=4.8.0",
+    
+    # Clipboard and system integration
+    "pyperclip>=1.8.2",
+    
+    # Network and web operations
+    "requests>=2.31.0",
+    "aiohttp>=3.8.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=4.9.0",
+    
+    # Data processing and analytics
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "matplotlib>=3.7.0",
+    
+    # Document processing
+    "PyPDF2>=3.0.0",
+    "pdfplumber>=0.9.0",
+    "openpyxl>=3.1.0",
+    
+    # Text processing and NLP
+    "textblob>=0.17.1",
+    
+    # Security and encryption
+    "cryptography>=41.0.0",
+    
+    # Audio processing
+    "SpeechRecognition>=3.10.0",
+    
+    # Development and code tools
+    "GitPython>=3.1.0",
+    
+    # Spell checking
+    "pyspellchecker>=0.7.2",
+    
+    # System information
+    "distro>=1.8.0",
+    
+    # JSON and data serialization
+    "orjson>=3.9.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0"
+]
+
+# Advanced AI/ML features
+ai = [
+    "openai>=1.0.0",
+    "anthropic>=0.7.0",
+    "transformers>=4.30.0",
+    "torch>=2.0.0",
+    "whisper>=1.0.0"
+]
+
+# Advanced computer vision
+vision = [
+    "mediapipe>=0.10.0",
+    "face-recognition>=1.3.0",
+    "dlib>=19.24.0",
+    "scikit-image>=0.21.0"
+]
+
+# Advanced audio processing
+audio = [
+    "pydub>=0.25.1",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.1",
+    "pyaudio>=0.2.11"
+]
+
+# Advanced data science
+datascience = [
+    "scikit-learn>=1.3.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.15.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.25.0"
+]
+
+# Database connectivity
+database = [
+    "sqlalchemy>=2.0.0",
+    "sqlite3",
+    "psycopg2-binary>=2.9.0",
+    "pymongo>=4.4.0"
+]
+
+# Cloud and API integrations
+cloud = [
+    "boto3>=1.28.0",
+    "google-cloud-storage>=2.10.0",
+    "azure-storage-blob>=12.17.0"
+]
+
+# All optional features
+all = [
+    "que-core[ai,vision,audio,datascience,database,cloud]"
+]
+
+[project.scripts]
+que-core = "que_core.runtime.main:main"
+que-server = "que_core.api.server:start_server"
+
+[project.urls]
+Homepage = "https://github.com/qubasehq/que-tools"
+Repository = "https://github.com/qubasehq/que-tools"
+Issues = "https://github.com/qubasehq/que-tools/issues"
+Changelog = "https://github.com/qubasehq/que-tools/blob/main/CHANGELOG.md"
+
+[tool.maturin]
+bindings = "pyo3"
+# manylinux / universal wheel config can be added later

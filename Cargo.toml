@@ -1,0 +1,23 @@
+[package]
+name = "que_core"
+version = "0.1.0"
+edition = "2021"
+description = "QUE CORE Rust Engine - High-performance system integration for AI agents. Provides battery monitoring, system info, shell execution, and network operations."
+license = "MIT"
+authors = ["QUE CORE Team <sarathbabuc@duck.com>"]
+homepage = "https://github.com/qubasehq/que-tools"
+repository = "https://github.com/qubasehq/que-tools"
+readme = "README.md"
+keywords = ["ai-agents", "system-control", "automation", "cross-platform", "pyo3"]
+categories = ["api-bindings", "os", "development-tools", "system-tools"]
+
+[lib]
+name = "que_core_engine"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.21", features = ["extension-module"] }
+sysinfo = "0.30"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# Add platform-specific crates later (winapi, core-foundation, x11-rs, etc.)

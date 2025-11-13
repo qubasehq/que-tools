@@ -1,0 +1,2042 @@
+version: 1.0.0
+description: QUE CORE Complete Tools Registry - All 97+ implemented tools
+tools:
+- name: get_system_info
+  category: system
+  description: Get comprehensive system information for AI agents
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_battery_status
+  category: system
+  description: Get battery status and charging information
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_network_info
+  category: system
+  description: Get network interface information
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: list_processes
+  category: system
+  description: List all running processes - useful for AI agents to understand system
+    state
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: set_volume
+  category: system
+  description: Set system volume level (0-100)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_volume
+  category: system
+  description: Get current system volume
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: lock_screen
+  category: system
+  description: Lock or sleep system
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: shutdown_system
+  category: system
+  description: Shutdown or restart computer
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_active_window_title
+  category: context
+  description: Get the title of the currently active window
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_cursor_position
+  category: context
+  description: Get current mouse cursor position
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_clipboard_text
+  category: context
+  description: Read text from clipboard
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: set_clipboard_text
+  category: context
+  description: Write text to clipboard
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: take_screenshot
+  category: context
+  description: Take a full screen screenshot and return as base64 encoded image
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: detect_idle_state
+  category: context
+  description: Detect if user is idle (no mouse/keyboard activity)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_display_info
+  category: context
+  description: Get display/monitor information
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: screen_ocr
+  category: context
+  description: Extract text from screen using OCR - useful for AI agents to read screen
+    content
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: click_at
+  category: automation
+  description: Simulate mouse click at specified coordinates
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: type_text
+  category: automation
+  description: Simulate keyboard typing with enhanced safety checks
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: scroll
+  category: automation
+  description: Simulate mouse wheel scrolling
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: hotkey_press
+  category: automation
+  description: Simulate keyboard shortcuts/hotkeys
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: drag_to
+  category: other
+  description: Drag mouse from current position to target coordinates
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: move_mouse
+  category: other
+  description: Move mouse cursor to specified coordinates
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: key_press
+  category: other
+  description: Press and release a single key
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: double_click
+  category: other
+  description: Perform double-click at specified coordinates
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: right_click
+  category: other
+  description: Perform right-click at specified coordinates
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: wait_and_click
+  category: other
+  description: Wait for a specified time then click at coordinates
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: safe_terminal_execution
+  category: other
+  description: Safely execute commands in terminal without focus issues
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: list_files
+  category: files
+  description: List files and directories in a path (Rust-accelerated)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: read_file
+  category: files
+  description: Read file contents (Rust-accelerated for text files)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: write_file
+  category: files
+  description: Write content to a file (Rust-accelerated)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: delete_file
+  category: files
+  description: Delete specified file or directory
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: copy_file
+  category: files
+  description: Copy File
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: move_file
+  category: files
+  description: Move/rename a file or directory
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_file_info
+  category: files
+  description: Get detailed information about a file or directory
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: search_files
+  category: files
+  description: Search for files by name pattern in a directory
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: open_app
+  category: apps
+  description: Launch an application by name or path
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: close_app
+  category: apps
+  description: Close/kill an application by name or PID
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: switch_app
+  category: apps
+  description: Bring an application window to front/focus
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: list_apps
+  category: apps
+  description: List installed applications (basic implementation)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: list_running_apps
+  category: apps
+  description: List currently running applications
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_active_window
+  category: apps
+  description: Get information about the currently active window
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: run_command
+  category: shell
+  description: Run a shell command and capture output
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: install_package
+  category: shell
+  description: Install a package via system package manager
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_env_vars
+  category: shell
+  description: Get environment variables
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: set_env_var
+  category: shell
+  description: Set an environment variable for current session
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_current_directory
+  category: other
+  description: Get current working directory
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: change_directory
+  category: other
+  description: Change current working directory
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: kill_process_by_pid
+  category: shell
+  description: Kill a process by PID
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: which_command
+  category: other
+  description: Find the path of a command (like 'which' command)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: ping_host
+  category: network
+  description: Ping host and return latency stats (Rust-accelerated)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: download_file
+  category: network
+  description: Download File
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: http_request
+  category: network
+  description: Http Request
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: check_internet
+  category: network
+  description: Quick connectivity check (Rust-accelerated)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_public_ip
+  category: network
+  description: Get Public Ip
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: open_website
+  category: network
+  description: Open Website
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: change_wallpaper
+  category: settings
+  description: Set desktop wallpaper
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: set_theme_mode
+  category: settings
+  description: Set Theme Mode
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: manage_bluetooth
+  category: settings
+  description: Manage Bluetooth
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: manage_wifi
+  category: settings
+  description: Manage Wifi
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: set_system_timezone
+  category: settings
+  description: Set System Timezone
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_installed_fonts
+  category: settings
+  description: Get Installed Fonts
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: create_virtual_env
+  category: development
+  description: Create Python virtual environment in a folder
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: run_python_script
+  category: development
+  description: Run Python Script
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: get_git_status
+  category: development
+  description: Get Git Status
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: commit_changes
+  category: development
+  description: Commit Changes
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: run_tests
+  category: development
+  description: Run Tests
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: build_project
+  category: development
+  description: Build Project
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: lint_code
+  category: development
+  description: Lint Code
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: format_code
+  category: development
+  description: Format Code
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: encrypt_file
+  category: security
+  description: Encrypt File
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: decrypt_file
+  category: security
+  description: Decrypt File
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: generate_password
+  category: security
+  description: Generate Password
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: hash_text
+  category: security
+  description: Hash Text
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: clear_temp_files
+  category: security
+  description: Clear Temp Files
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: record_audio
+  category: audio
+  description: Record audio from microphone
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: play_audio
+  category: audio
+  description: Play Audio
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: transcribe_audio
+  category: audio
+  description: Transcribe Audio
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: speak_text
+  category: audio
+  description: Speak Text
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: list_audio_devices
+  category: audio
+  description: List Audio Devices
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: adjust_mic_gain
+  category: audio
+  description: Adjust microphone gain/volume level
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: adjust_speaker_volume
+  category: audio
+  description: Adjust speaker/output volume level
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: capture_camera_image
+  category: vision
+  description: Capture image from camera/webcam
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: start_camera_stream
+  category: vision
+  description: Start camera stream (simplified implementation)
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: stop_camera_stream
+  category: vision
+  description: Stop camera stream
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: detect_faces
+  category: vision
+  description: Detect faces in an image
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: detect_objects
+  category: vision
+  description: Detect objects in an image
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: analyze_scene
+  category: vision
+  description: Analyze scene composition and content
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: summarize_text
+  category: document
+  description: Summarize long text using extractive summarization
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: extract_text_from_pdf
+  category: document
+  description: Extract text from PDF file
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: analyze_sentiment
+  category: document
+  description: Analyze sentiment of text using simple word-based approach
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: spell_check
+  category: document
+  description: Check spelling and suggest corrections
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: search_text
+  category: document
+  description: Search for patterns in text
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: load_csv
+  category: data
+  description: Load CSV file into memory structure
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: describe_data
+  category: data
+  description: Return summary statistics for dataset
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: plot_chart
+  category: data
+  description: Create chart image file
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: query_data
+  category: data
+  description: Run filter/aggregation query on data
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true
+- name: export_data
+  category: data
+  description: Export data to different formats
+  platforms:
+  - windows
+  - macos
+  - linux
+  args:
+    type: object
+    properties: {}
+    required: []
+  returns:
+    type: object
+    properties:
+      success:
+        type: boolean
+      result:
+        type: object
+      error:
+        type: string
+        nullable: true

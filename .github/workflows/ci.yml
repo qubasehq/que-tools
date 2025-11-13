@@ -1,0 +1,19 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Install maturin
+        run: pip install maturin
+      - name: Build package (maturin)
+        run: maturin build --no-sdist
+      - name: Run unit tests
+        run: pytest -q
